@@ -1,0 +1,11 @@
+# Créer un environnement virtuel
+python -m venv venv
+
+# Activer l'environnement virtuel
+# Sur Windows
+venv\Scripts\activate
+# Sur macOS et Linux
+source venv/bin/activate
+
+# Installer Flask
+pip install flask

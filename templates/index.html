@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="home">
+    <div class="video-background">
+        <video class="video-foreground" autoplay muted loop>
+            <source src="{{ url_for('static', filename='/videos/video1.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <div class="container">
+                <h2>Bienvenue sur le SVESE</h2>
+                <p>Le Système de Vote Électronique Sécurisé (SVESE) révolutionne les élections en Côte d'Ivoire.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Bienvenue sur SVESE</h1>
+    <p>Le Système de Vote Électronique Sécurisé pour la Côte d'Ivoire.</p>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h2>Fonctionnalités</h2>
+        <div class="feature">
+            <h3>Technologie Blockchain</h3>
+            <p>Garantit l'intégrité et la traçabilité des votes.</p>
+        </div>
+        <div class="feature">
+            <h3>Chiffrement Robuste</h3>
+            <p>Protection des votes et des données personnelles.</p>
+        </div>
+        <div class="feature">
+            <h3>Vérification Indépendante</h3>
+            <p>Audits et vérifications indépendants pour assurer la transparence.</p>
+        </div>
+        <div class="feature">
+            <h3>Interface Conviviale</h3>
+            <p>Facile à utiliser pour tous les citoyens.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

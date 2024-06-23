@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <h1>Vote</h1>
+    <form action="{{ url_for('vote') }}" method="post">
+        <label for="candidate">Choisissez un candidat:</label>
+        <select id="candidate" name="candidate" required>
+            {% for candidate in candidates %}
+                <option value="{{ candidate }}">{{ candidate }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Voter</button>
+    </form>
+</section>
+{% endblock %}

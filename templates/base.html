@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVESE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SVESE</h1>
+            <nav>
+                <a href="{{ url_for('index') }}">Accueil</a>
+                <a href="{{ url_for('journal') }}">Journal</a>
+                <a href="{{ url_for('features') }}">Fonctionnalités</a>
+                <a href="{{ url_for('about') }}">À propos</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                {% if not session.logged_in %}
+                    <a href="{{ url_for('login') }}">Connexion</a>
+                    <a href="{{ url_for('register') }}">Inscription</a>
+                {% else %}
+                    <a href="{{ url_for('vote') }}">Vote</a>
+                    {% if session.admin %}
+                        <a href="{{ url_for('admin') }}">Admin</a>
+                        <a href="{{ url_for('end_vote') }}">Fin du vote</a>
+                    {% endif %}
+                    <a href="{{ url_for('logout') }}">Déconnexion</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 SVESE. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

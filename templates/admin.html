@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <h1>Admin</h1>
+    <form action="{{ url_for('admin') }}" method="post">
+        <label for="candidate">Ajouter un candidat:</label>
+        <input type="text" id="candidate" name="candidate" required>
+        <button type="submit">Ajouter</button>
+    </form>
+    <h2>Liste des candidats</h2>
+    <ul>
+        {% for candidate in candidates %}
+            <li>{{ candidate }}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
