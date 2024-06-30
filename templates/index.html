@@ -15,30 +15,41 @@
     </div>
 </section>
 
-<section>
-    <h1>Bienvenue sur SVESE</h1>
-    <p>Le Système de Vote Électronique Sécurisé pour la Côte d'Ivoire.</p>
+<section class="titre">
+    <h1>Qui sommes nous ?</h1>
 </section>
 
-<section id="features">
-    <div class="container">
-        <h2>Fonctionnalités</h2>
-        <div class="feature">
-            <h3>Technologie Blockchain</h3>
-            <p>Garantit l'intégrité et la traçabilité des votes.</p>
-        </div>
-        <div class="feature">
-            <h3>Chiffrement Robuste</h3>
-            <p>Protection des votes et des données personnelles.</p>
-        </div>
-        <div class="feature">
-            <h3>Vérification Indépendante</h3>
-            <p>Audits et vérifications indépendants pour assurer la transparence.</p>
-        </div>
-        <div class="feature">
-            <h3>Interface Conviviale</h3>
-            <p>Facile à utiliser pour tous les citoyens.</p>
-        </div>
+<section class="section">
+    <img src="static/images/affiche-electoral.jpg" alt="Election image">
+    <div class="content">
+        <h2>Plus simple, plus rapide et plus fiable</h2>
+        <p>Publié par Patrick Saha le 23 mai 2023. Informations : 5,343. Relectures avec les USA Today: 2,005, Essentiellement: 11,923. Téléphones portables: 3,322. Téléspectateurs: 10.</p>
+        <button class="btn" onclick="window.location.href='features.html'">Fonctionnalités</button>
     </div>
+</section>
+<section class="stats">
+    <div class="stat">
+        <i class="fas fa-users"></i>
+        <p class="number" data-target="90">0 %</p>
+        <p>Personnes actifs</p>
+    </div>
+    <div class="stat">
+        <i class="fas fa-shield-alt"></i>
+        <p class="number" data-target="80">0 %</p>
+        <p>Sécurité des informations</p>
+    </div>
+    <div class="stat">
+        <i class="fas fa-check-circle"></i>
+        <p class="number" data-target="60">0 %</p>
+        <p>Vote finalisé avec succès</p>
+    </div>
+</section>
+<section class="article">
+    <div class="article-content">
+        <h2>Les biens fait du président pour la Côte d'Ivoire</h2>
+        <p>L’ordonnance N° 2020-318 du 05 avril 2020 portant création de l’Agence Côte d’Ivoire PME (Agence CI-PME) avait pour objectif de créer un organe doté d’une personnalité morale et d’une autonomie financière afin de conduire la politique de développement des PME en Côte d’Ivoire. Cette agence était censée s’inscrire dans une logique d’accompagnement des PME ivoiriennes...</p>
+        <button class="btn" onclick="window.location.href='journal.html'">Suivre le journal</button>
+    </div>
+    <img src="static/images/affiche-electoral.jpg" alt="President image">
 </section>
 {% endblock %}

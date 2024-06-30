@@ -12,6 +12,8 @@ users = {
 }
 candidates = {}
 votes = {}
+user_votes = {}
+voting_active = True
 
 @app.route('/')
 def index():
@@ -55,10 +57,8 @@ def login():
         if email in users and users[email]['password'] == password:
             session['logged_in'] = True
             session['email'] = email
-            if users[email]['is_admin']:
-                session['admin'] = True
-                return redirect(url_for('admin'))
-            return redirect(url_for('index'))
+            session['admin'] = users[email]['is_admin']
+            return redirect(url_for('admin' if session['admin'] else 'index'))
         else:
             flash('Invalid email or password.')
     return render_template('login.html')
@@ -74,15 +74,26 @@ def logout():
 def vote():
     if 'logged_in' not in session:
         return redirect(url_for('login'))
+    if 'admin' in session and session['admin']:
+        flash('Administrators cannot vote.')
+        return redirect(url_for('index'))
+    if not voting_active:
+        flash('Voting has ended. You can only view the results.')
+        return redirect(url_for('results'))
+    user_email = session['email']
+    if user_email in user_votes:
+        flash('You have already voted.')
+        return redirect(url_for('index'))
     if request.method == 'POST':
         candidate = request.form['candidate']
         if candidate in votes:
             votes[candidate] += 1
         else:
             votes[candidate] = 1
+        user_votes[user_email] = candidate
         blockchain.add_vote(candidate)
-        flash('Vote successfully cast.')
-        return redirect(url_for('vote'))
+        flash('Vote successfully cast. Thank you for voting on our platform.')
+        return redirect(url_for('index'))
     return render_template('vote.html', candidates=candidates)
 
 @app.route('/admin', methods=['GET', 'POST'])
@@ -105,6 +116,8 @@ def end_vote():
     if 'logged_in' not in session or not users.get(session['email'], {}).get('is_admin'):
         flash('Access denied. Please log in as an administrator.')
         return redirect(url_for('login'))
+    global voting_active
+    voting_active = False
     flash('Voting has ended. Results are published.')
     return redirect(url_for('results'))
 

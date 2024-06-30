@@ -1,154 +1,298 @@
+/* Style global du corps de la page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f0f0f0; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
     margin: 0;
     padding: 0;
 }
 
+/* Style de l'en-tête */
 header {
     background-color: #008000; /* Vert */
-    color: #ffffff;
-    /* padding: 20px 0; */
-    padding: 1rem;
-    text-align: center;
+    color: #ffffff; /* Couleur du texte */
+    padding: 1rem; /* Marge intérieure */
+    text-align: center; /* Centrage du texte */
 }
 
+/* Conteneur de l'en-tête */
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    display: flex; /* Affichage en flexbox */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical */
+    padding: 0 20px; /* Marge intérieure latérale */
 }
 
+/* Style du titre de l'en-tête */
 header h1 {
-    margin: 0;
+    margin: 0; /* Suppression de la marge */
 }
 
+/* Liste de navigation */
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    list-style: none; /* Suppression des puces */
+    margin: 0; /* Suppression de la marge */
+    padding: 0; /* Suppression de la marge intérieure */
+    display: flex; /* Affichage en flexbox */
 }
 
+/* Élément de liste de navigation */
 header nav ul li {
-    margin-left: 20px;
+    margin-left: 20px; /* Marge à gauche */
 }
 
+/* Liens de navigation */
 header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Suppression du soulignement */
 }
 
+/* Liens de navigation dans la barre de navigation */
 nav a {
-    margin: 0 1rem;
-    color: white;
-    text-decoration: none;
+    margin: 0 1rem; /* Marge latérale */
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Suppression du soulignement */
 }
 
-/* main {
-    padding: 2rem;
-} */
- 
-
+/* Sections principales */
 section {
-    padding: 40px 20px;
+    padding: 40px 20px; /* Marge intérieure */
 }
 
+/* Conteneur des sections */
 section .container {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1000px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
 }
 
+/* Section d'accueil */
 #home {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative; /* Position relative */
+    height: 60vh; /* Hauteur */
+    display: flex; /* Affichage en flexbox */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    text-align: center; /* Centrage du texte */
 }
 
+/* Fond vidéo */
 .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
+    position: absolute; /* Position absolue */
+    top: 0; /* Positionnement en haut */
+    left: 0; /* Positionnement à gauche */
+    width: 100%; /* Largeur */
+    height: 100%; /* Hauteur */
+    overflow: hidden; /* Masquage du débordement */
+    z-index: -1; /* Index z */
 }
 
+/* Contenu de la vidéo */
 .video-foreground {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+    width: 100%; /* Largeur */
+    height: 100%; /* Hauteur */
+    object-fit: cover; /* Recouvrement */
+    pointer-events: none; /* Désactivation des événements */
 }
 
+/* Superposition de la vidéo */
 .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-
-    /* Ajout de l'opacité sombre */
-    background-color: rgba(0, 0, 0, 0.3); /* Opacité à ajuster selon votre préférence */
+    position: absolute; /* Position absolue */
+    top: 0; /* Positionnement en haut */
+    left: 0; /* Positionnement à gauche */
+    width: 100%; /* Largeur */
+    height: 100%; /* Hauteur */
+    display: flex; /* Affichage en flexbox */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    text-align: center; /* Centrage du texte */
+    z-index: 1; /* Index z */
+    color: white; /* Couleur du texte */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Ombre du texte */
+    background-color: rgba(0, 0, 0, 0.3); /* Fond avec opacité */
 }
 
+/* Conteneur de la superposition de la vidéo */
 .video-overlay .container {
-    position: relative;
-    z-index: 2;
+    position: relative; /* Position relative */
+    z-index: 2; /* Index z */
 }
 
+/* Caractéristiques des fonctionnalités */
 #features .feature {
-    background-color: #e0e0e0;
-    padding: 20px;
-    margin: 20px 0;
+    background-color: #e0e0e0; /* Couleur de fond */
+    padding: 20px; /* Marge intérieure */
+    margin: 20px 0; /* Marge extérieure */
 }
 
+/* Titre des fonctionnalités */
 #features .feature h3 {
-    margin-top: 0;
+    margin-top: 0; /* Suppression de la marge supérieure */
 }
 
+/* Style du pied de page */
 footer {
-    background-color: #333333;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
+    background-color: #333333; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    padding: 10px 0; /* Marge intérieure */
 }
 
+/* Style des formulaires */
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Affichage en flexbox */
+    flex-direction: column; /* Direction de la flexbox */
 }
 
+/* Labels des formulaires */
 form label {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Marge inférieure */
 }
 
+/* Champs de formulaire et boutons */
 form input, form select, form button {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
+    margin-bottom: 15px; /* Marge inférieure */
+    padding: 10px; /* Marge intérieure */
+    font-size: 16px; /* Taille de la police */
 }
 
+/* Bouton du formulaire */
 form button {
     background-color: #008000; /* Vert */
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
+    color: #ffffff; /* Couleur du texte */
+    border: none; /* Suppression de la bordure */
+    cursor: pointer; /* Curseur de la souris */
 }
 
+/* Effet au survol du bouton */
 form button:hover {
-    background-color: #006600;
+    background-color: #006600; /* Vert foncé */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Direction de la flexbox */
+    }
+
+    nav {
+        display: none; /* Masquage de la navigation */
+        flex-direction: column; /* Direction de la flexbox */
+        width: 100%; /* Largeur */
+    }
+
+    nav a {
+        margin: 0; /* Suppression de la marge */
+        padding: 1rem; /* Marge intérieure */
+        text-align: center; /* Centrage du texte */
+    }
+
+    .menu-toggle {
+        display: block; /* Affichage du bouton de menu */
+        background-color: #008000; /* Couleur de fond */
+        color: #ffffff; /* Couleur du texte */
+        padding: 1rem; /* Marge intérieure */
+        text-align: center; /* Centrage du texte */
+        cursor: pointer; /* Curseur de la souris */
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+
+
+.titre {
+    text-align: center; /* Centrage du texte */
+}
+
+/* 
+main {
+    padding: 20px;
+} */
+
+.section, .article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section img, .article img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.content {
+    flex: 1;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.number {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+
+/* CSS pour centrer le bouton */
+/* body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.centered {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement intérieur */
+    text-align: center; /* Alignement du texte */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marge */
+    cursor: pointer; /* Curseur de la souris */
+    border-radius: 4px; /* Bordure arrondie */
 }

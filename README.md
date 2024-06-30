@@ -15,6 +15,26 @@ Le SystEme de Vote Electronique sEcurisE (SVESE) est un projet innovant visant �
 
 ![Capture d'écran 1](static/images/Capture.PNG)
 
+## Comment l'ancé le site
+
+# Créer un environnement virtuel
+python -m venv venv
+
+# Activer l'environnement virtuel
+# Sur Windows
+venv\Scripts\activate
+# Sur macOS et Linux
+source venv/bin/activate
+
+# Installer Flask
+pip install flask
+
+# Lancer le projet
+python app.py
+
+# Allez sur 
+http://127.0.0.1:5000/
+
 ## Comment Contribuer
 
 Si vous souhaitez contribuer au développement du SVESE, veuillez suivre ces étapes :
