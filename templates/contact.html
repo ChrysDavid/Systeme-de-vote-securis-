@@ -3,5 +3,40 @@
 <section>
     <h1>Contact</h1>
     <p>Formulaire et informations de contact.</p>
+    <div class="banner">
+        <h2>Contact</h2>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="map">
+        <img src="static/images/GoogleMapTA.webp" alt="Map">
+    </div>
+    <div class="contact-form">
+        <h3>Contactez nous ici</h3>
+        <form>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom">
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prenom</label>
+                <input type="text" id="prenom" name="prenom">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="numero">Numero</label>
+                <input type="text" id="numero" name="numero">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit">Envoyé</button>
+        </form>
+    </div>
 </section>
 {% endblock %}
