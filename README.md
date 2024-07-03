@@ -45,6 +45,9 @@ Si vous souhaitez contribuer au développement du SVESE, veuillez suivre ces ét
 4. Pushez vers la branche : `git push origin ma-nouvelle-fonctionnalite`
 5. Soumettez une demande de pull request !
 
+### Lien du Figma :
+https://www.figma.com/design/XN6RmrFL9MB0u8GFz9xs61/Syst%C3%A8me-de-vote-%C3%A9lectronique-%C3%A0-acces-s%C3%A9curis%C3%A9?node-id=25-83&t=UQxEVyRcuplcwgPj-0
+
 ## Contact
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter à l'adresse suivante : kchrysdavidbr@gmail.com
